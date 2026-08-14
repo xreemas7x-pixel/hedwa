@@ -1,0 +1,1843 @@
+/* 1. التنسيقات العامة للموقع */
+b/* 1. التنسيقات العامة للموقع */
+/* 1. التنسيقات العامة - زدنا المسافة عشان الهيدر */
+
+
+/* تعديل البريد كرمبز عشان تبرز فوق كل شيء */
+.breadcrumbs { 
+    text-align: right; 
+    font-size: 14px; 
+    color: #8c7361; 
+    position: relative;
+    z-index: 999; /* عشان تضمن إنها فوق أي خلفية أو بوكس */
+    margin-bottom: 20px;
+    display: block;
+    width: 100%;
+}
+/* 1. التنسيقات العامة - إرجاع الخلفية البيج لكل الموقع */
+body { 
+    font-family: 'Cairo', sans-serif; 
+    margin: 0;  
+    padding: 0;  
+    background-color: #fdfaf5 !important; /* هذا اللون البيج الفاتح الدافئ */
+    color: #4a3427; 
+    line-height: 1.6; 
+    padding-top: 110px; 
+}
+
+/* 2. تأكد أن الـ wrapper لا يغير اللون للأبيض */
+.main-wrapper {  
+    width: 85%; 
+    margin: 0 auto; 
+    padding-bottom: 20px; 
+    background-color: transparent !important; /* نضمن إنه شفاف وما يغطي البيج */
+}
+
+/* 3. صناديق المحتوى (التقييم والتواصل) - بيج أغمق شوي */
+.evaluation-box, .content-card { 
+    background-color: #f5eddf !important; /* بيج دافئ وواضح */
+    border: 1px solid #e0d5c1; 
+    border-radius: 8px; 
+    margin-bottom: 30px;
+}
+
+/* 2. الهيدر (Header) */
+header { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 0 80px; 
+    background-color: #ffffff; 
+    border-bottom: 1px solid #e0d5c1; 
+    height: 70px; 
+    position: fixed; 
+    top: 0; left: 0; right: 0; 
+    z-index: 1000; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+}
+
+.logo-container { display: flex; align-items: center; gap: 12px; }
+.logo-container span { font-size: 22px; font-weight: bold; }
+.nav-links { display: flex; gap: 30px; }
+.nav-links a { text-decoration: none; color: #4a3427; font-weight: bold; font-size: 16px; }
+.nav-links a.active-gold, .nav-links a.contact-gold { color: #c5a048; }
+
+.user-interface { display: flex; align-items: center; gap: 15px; }
+.btn-lang { 
+    background: none; border: 1px solid #e0d5c1; 
+    color: #8c7361; padding: 5px 15px; 
+    border-radius: 5px; cursor: pointer; font-family: inherit; 
+}
+/* --- إصلاح لوحة التحكم (Dashboard) --- */
+
+/* 1. قسم البروفايل (توسيط المحتوى) */
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* يخلي الصورة والنص في النص بالضبط */
+    margin: 10px 0;
+    text-align: center;
+}
+
+.profile-section img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid #c5a048; /* إطار ذهبي للصورة */
+}
+
+/* 2. الروابط (ملاحظاتي و تقييم المدرب) - ترتيبها بالعرض */
+/* --- إعادة تصميم كروت لوحة التحكم (المربعات) --- */
+
+.dash-nav {
+    display: flex;
+    justify-content: center;
+    gap: 25px; /* المسافة بين المربعين */
+    margin: 40px 0;
+    padding: 0;
+    flex-wrap: wrap; /* عشان لو الشاشة صغيرة ينزلون تحت بعض */
+}
+
+.dash-nav a {
+    background-color: #f5eddf; /* لون المربع البيج */
+    border: 1px solid #e0d5c1;
+    color: #4a3427;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 20px; /* يعطي مساحة داخل المربع */
+    border-radius: 12px;
+    width: 280px; /* عرض المربع */
+    display: flex;
+    flex-direction: column; /* الأيقونة فوق والكلام تحت */
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+}
+
+/* تأثير عند مرور الماوس على المربع */
+.dash-nav a:hover {
+    background-color: #e0d5c1;
+    transform: translateY(-8px); /* يرتفع المربع شوي */
+    box-shadow: 0 8px 15px rgba(0,0,0,0.05);
+}
+
+/* تكبير الأيقونة أو الإيموجي داخل المربع */
+.dash-nav a span {
+    font-size: 40px;
+    display: block;
+}
+
+/* 3. إصلاح الجدول (Table) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+    margin: 20px 0;
+    border-radius: 8px;
+    overflow: hidden; /* عشان زوايا الجدول تطلع ناعمة */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+th, td {
+    border: 1px solid #e0d5c1;
+    padding: 15px;
+    text-align: center; /* توسيط الكلام داخل الجدول */
+}
+
+th {
+    background-color: #f5eddf;
+    color: #4a3427;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #fdfaf5; /* تلوين سطر وسطر عشان يسهل القراءة */
+}
+
+/* 4. عنوان لوحة التحكم */
+.page-title-section h1 {
+    font-size: 36px;
+    color: #4a3427;
+    margin-bottom: 10px;
+    text-align: center;
+    width: 100%;
+}
+/* 3. العناوين وصناديق المحتوى */
+/* تنسيق أيقونات السوشيال ميديا في صفحة تواصل معنا لضبط الحجم */
+.social-group .social-icon-img {
+    width: 24px; /* هذا الحجم المناسب للأيقونات */
+    height: auto;
+    object-fit: contain;
+    margin: 0 5px; /* مسافة بسيطة بين الأيقونات */
+}/* تنسيق الفيديو (صغرنا العرض وزدنا المساحة اللي فوقه) */
+video { 
+    width: 70%; /* الحجم الصغير */
+    max-width: 800px; 
+    display: block; 
+    margin: 10px auto 40px auto; /* زدنا الرقم الأول (اللي فوق) لـ 100px عشان ما يلزق */
+    border-radius: 8px; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+}
+.page-title-section { 
+    margin: 40px 0; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    gap: 15px; 
+}
+.page-title-section h1 { font-size: 32px; margin: 0; }
+
+/* صندوق الملاحظات والتقييم (عرض محدد 700px) */
+.evaluation-box { 
+    background-color: #f5eddf; 
+    width: 700px; 
+    margin: 0 auto 30px auto; 
+    padding: 40px; 
+    border: 1px solid #e0d5c1; 
+    border-radius: 8px; 
+    text-align: right;
+    box-sizing: border-box;
+}
+
+/* صندوق صفحة التواصل (عرض كامل ومرن) */
+.content-card { 
+    background-color: #f5eddf; 
+    width: 100%; 
+    max-width: 1100px; 
+    margin: 0 auto 30px auto; 
+    padding: 40px; 
+    border: 1px solid #e0d5c1; 
+    border-radius: 5px; 
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* 4. النجوم (Rating Stars) */
+.rating-stars { 
+    display: flex; 
+    flex-direction: row-reverse; 
+    justify-content: center; 
+    gap: 10px; 
+    margin: 10px 0 20px 0; 
+}
+.rating-stars input { display: none; }
+.rating-stars label { 
+    font-size: 35px; 
+    color: #e0d5c1; 
+    cursor: pointer; 
+    transition: 0.2s; 
+}
+.rating-stars input:checked ~ label, 
+.rating-stars label:hover, 
+.rating-stars label:hover ~ label { 
+    color: #c5a048; 
+}
+
+/* 5. الملاحظات (Notes List) */
+/* تنسيق صندوق الملاحظات (عشان يرجع الكلام سطر واحد) */
+.note-item { 
+    background: #ffffff; 
+    padding: 15px 20px; 
+    margin-bottom: 15px; 
+    border-radius: 8px; 
+    display: flex; 
+    flex-direction: row; /* يخلي العناصر جنب بعض مو فوق بعض */
+    align-items: center; 
+    justify-content: flex-start; /* يبدأ من اليمين */
+    gap: 15px; 
+    border: 1px solid #e0d5c1; 
+    text-align: right;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* النص داخل الملاحظة */
+.note-item span { 
+    flex: 1; 
+    white-space: normal; /* يسمح للنص يمتد بعرض الصفحة */
+    font-size: 16px;
+    color: #4a3427;
+}
+
+/* التشيك بوكس عشان ما يطير في النص */
+.note-item input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    cursor: pointer;
+    flex-shrink: 0; /* يمنع انكماش المربع */
+}
+
+/* 6. ترتيب نموذج التواصل (العمودين) */
+.form-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    text-align: right;
+    width: 100%;
+}
+
+.form-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 7. المدخلات والأزرار */
+input, textarea, select { 
+    width: 100%; 
+    padding: 12px; 
+    margin-bottom: 20px; 
+    border: 1px solid #c9b9a5; 
+    border-radius: 4px; 
+    background-color: #ffffff; 
+    font-family: inherit; 
+    box-sizing: border-box; 
+}
+
+textarea { height: 145px; resize: none; text-align: right; }
+
+.btn-send { 
+    background-color: #a38c71; 
+    color: white; 
+    border: none; 
+    padding: 12px 30px; 
+    cursor: pointer; 
+    border-radius: 4px; 
+    font-weight: bold; 
+    width: 100%; 
+    margin-top: 15px; 
+}
+
+.btn-submit { 
+    padding: 12px 50px; 
+    background-color: #a38c71; 
+    color: white; 
+    border: none; 
+    cursor: pointer; 
+    font-weight: bold; 
+    align-self: flex-start; /* يخلي الزر يمين في صفحة التواصل */
+}
+
+.btn-delete { 
+    background-color: #d9534f; 
+    color: white; 
+    border: none; 
+    padding: 6px 20px; 
+    cursor: pointer; 
+    border-radius: 4px; 
+    font-weight: bold; 
+}
+
+/* 8. الفوتر (Footer) */
+footer { 
+    background-color: #4a3427; 
+    color: #fdfaf5; 
+    padding: 60px 100px 30px 100px; 
+    margin-top: 80px; 
+}
+
+.footer-top-subscription { 
+    display: flex; 
+    justify-content: center; 
+    margin-bottom: 60px; 
+    flex-direction: column; 
+    align-items: center; 
+}
+
+.sub-pill-container { 
+    display: flex; 
+    background-color: #ffffff; 
+    border-radius: 50px; 
+    padding: 3px; 
+    width: 380px; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+}
+
+.sub-pill-container input { 
+    flex: 1; 
+    border: none; 
+    background: transparent; 
+    padding: 8px 15px; 
+    outline: none; 
+    text-align: right; 
+    margin-bottom: 0; 
+}
+
+.sub-pill-container button { 
+    background-color: #c5a048; 
+    color: white; 
+    border: none; 
+    padding: 8px 25px; 
+    border-radius: 50px; 
+    cursor: pointer; 
+    font-weight: bold; 
+}
+
+.footer-bottom-columns { 
+    display: flex; 
+    justify-content: space-between; 
+    border-top: 1px solid #6f5a4e; 
+    padding-top: 40px; 
+}
+
+.footer-col { flex: 1; text-align: right; }
+.footer-col h4, .footer-title-yellow { color: #c5a048; font-size: 22px; margin-bottom: 20px; }
+.footer-col a, .footer-col p { 
+    color: #fdfaf5; 
+    text-decoration: none; 
+    font-size: 15px; 
+    margin: 5px 0; 
+    display: block; 
+    opacity: 0.9; 
+}
+
+.footer-social-group { 
+    display: flex; 
+    justify-content: flex-start;
+    gap: 15px; 
+    margin-top: 15px; 
+}
+.footer-social-icon { width: 22px; height: auto; }
+.course-banner {
+    width: 100%;
+    height: 350px;
+    background-color: #eee;
+}
+
+.banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.course-content-wrapper {
+    padding: 50px 10%;
+}
+
+.main-overview {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.overview-info { flex: 2; text-align: right; }
+
+/* البطاقة الجانبية */
+.side-info-card {
+    flex: 1;
+    border: 1px solid #ddd;
+    padding: 30px;
+    border-radius: 12px;
+    background: #fff;
+    height: fit-content;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.info-row { margin-bottom: 20px; font-size: 1.1rem; }
+
+.enroll-btn {
+    width: 100%;
+    padding: 15px;
+    background: #b08d57;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* المنهج */
+.curriculum-list { margin-top: 20px; }
+
+.curriculum-item {
+    border: 1px solid #eee;
+    padding: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+}
+
+/* بطاقة المدرب */
+.instructor-card {
+    border: 1px solid #eee;
+    padding: 25px;
+    background-color: #fafafa;
+    border-right: 5px solid #b08d57; /* لمسة جمالية */
+    margin-top: 15px;
+}
+/* ============================================
+   COURSES PAGE STYLES
+   ============================================ */
+.page-header-courses {
+    background-color: #f5eddf;
+    padding: 50px 0 40px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.page-title {
+    font-size: 42px;
+    font-weight: 800;
+    color: #4a3427;
+    font-family: 'Amiri', serif;
+    margin-bottom: 10px;
+}
+
+.page-desc {
+    font-size: 18px;
+    color: #8c7361;
+}
+
+.courses-page {
+    padding: 0 0 60px;
+    background-color: #fdfaf5;
+}
+
+.courses-grid-page {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.course-card-page {
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 350px;
+    transition: all 0.3s;
+    border: 1px solid #e0d5c1;
+}
+
+.course-card-page:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.course-img-page {
+    height: 200px;
+    overflow: hidden;
+}
+
+.course-img-page img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.course-card-page:hover .course-img-page img {
+    transform: scale(1.03);
+}
+
+.course-info-page {
+    padding: 20px;
+}
+
+.course-info-page h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #c5a048;
+    margin-bottom: 10px;
+}
+
+.course-info-page p {
+    font-size: 14px;
+    color: #6f5a4e;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.course-meta-page {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.course-level-page {
+    background-color: #f5eddf;
+    color: #c5a048;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.course-level-page.advanced {
+    background-color: #e8d5b5;
+    color: #a38c71;
+}
+
+.course-teacher-page {
+    color: #8c7361;
+    font-size: 13px;
+}
+
+.course-link-page {
+    display: inline-block;
+    margin-top: 15px;
+    color: #c5a048;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.course-link-page:hover {
+    color: #a8893a;
+}
+
+/* ============================================
+   RESPONSIVE FOR COURSES PAGE
+   ============================================ */
+
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 32px;
+    }
+    
+    .page-desc {
+        font-size: 16px;
+    }
+    
+    .courses-grid-page {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .course-card-page {
+        width: 100%;
+        max-width: 380px;
+    }
+    
+    .course-info-page h3 {
+        font-size: 18px;
+    }
+}
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: #ffffff;
+}
+
+.nav-links {
+    display: flex;
+    list-style-type: none; 
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #444;
+    font-weight: bold;
+}
+
+.nav-links a.active {
+    color: #b08d57;
+}
+
+
+.hero-container {
+    position: relative; 
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%); 
+}
+
+.hero-text-overlay {
+    position: absolute;
+    text-align: center;
+    color: #ffffff;
+}
+
+
+#mission-info {
+    padding: 60px 15%;
+    text-align: center;
+}
+
+.trainers-section {
+    padding: 60px 5%;
+    direction: rtl;
+}
+
+.trainers-header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #f5eddf;
+    padding-bottom: 15px;
+}
+
+.trainers-header h2 {
+    font-size: 24px;
+    color: #4a3427;
+    margin: 0;
+}
+
+
+.styled-select {
+    padding: 8px 15px;
+    border: 1px solid #c5a048;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #4a3427;
+    font-family: 'Cairo', sans-serif;
+    outline: none;
+    width: auto; 
+    min-width: 120px;
+}
+
+
+.trainers-scroll {
+    display: flex;
+    overflow-x: auto; 
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.trainer-card {
+    min-width: 240px;
+    background-color: #ffffff;
+    padding: 25px;
+    border: 1px solid #eee;
+    text-align: center;
+    border-radius: 10px;
+}
+
+
+.trainer-img-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 15px;
+    border: 3px solid #b08d57;
+}
+
+.trainer-img-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.exp-text {
+    color: #b08d57;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+/* ============================================
+   HERO SECTION
+   ============================================ */
+.hero {
+    position: relative;
+    background-image: url('images/hero-.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.hero-title {
+    font-size: 80px;
+    font-weight: 800;
+    color: #F5F0E8;
+    font-family: 'Noto Naskh Arabic', 'Amiri', 'Traditional Arabic', serif;
+    margin-bottom: 20px;
+}
+
+.hero-line {
+    width: 80px;
+    height: 2px;
+    background-color: #c5a048;
+    margin: 20px auto;
+}
+
+.hero-desc {
+    font-size: 18px;
+    color: rgba(255,255,255,0.9);
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.btn-gold {
+    background-color: #c5a048;
+    color: #4a3427;
+    padding: 12px 32px;
+    text-decoration: none;
+    border-radius: 40px;
+    font-weight: 700;
+    transition: all 0.3s;
+}
+
+.btn-gold:hover {
+    background-color: #a8893a;
+    transform: translateY(-2px);
+}
+
+/* ============================================
+   WHY SECTION
+   ============================================ */
+.why-section {
+    padding: 70px 0;
+    background-color: #ffffff;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: 800;
+    color: #4a3427;
+    font-family: 'Amiri', serif;
+}
+
+.title-line {
+    width: 60px;
+    height: 2px;
+    background-color: #c5a048;
+    margin: 12px auto 0;
+}
+
+.section-sub {
+    text-align: center;
+    color: #8c7361;
+    margin-top: 8px;
+}
+
+.features-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.feature {
+    text-align: center;
+    width: 300px;
+    padding: 30px 20px;
+    background-color: #fdfaf5;
+    border-radius: 16px;
+    transition: all 0.3s;
+    border: 1px solid #e0d5c1;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.feature-icon-circle {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px;
+    background-color: #f5eddf;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e0d5c1;
+}
+
+.feature-icon-circle img {
+    width: 35px;
+    height: 35px;
+}
+
+.feature h3 {
+    font-size: 22px;
+    color: #c5a048;
+    margin-bottom: 12px;
+}
+
+.feature p {
+    color: #4a3427;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+/* ============================================
+   COURSES SECTION - HOME PAGE
+   ============================================ */
+.courses-section {
+    padding: 70px 0;
+    background-color: #fdfaf5;
+}
+
+.courses-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.course-card {
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 340px;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: all 0.3s;
+    border: 1px solid #e0d5c1;
+}
+
+.course-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.course-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #c5a048;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    z-index: 2;
+}
+
+.course-badge.advanced {
+    background-color: #a38c71;
+}
+
+.course-image {
+    height: 180px;
+    overflow: hidden;
+}
+
+.course-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.course-card:hover .course-image img {
+    transform: scale(1.03);
+}
+
+.course-info {
+    padding: 20px;
+}
+
+.course-meta {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: #8c7361;
+}
+
+.course-info h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #4a3427;
+}
+
+.course-info p {
+    font-size: 13px;
+    color: #6f5a4e;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.course-instructor {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.instructor-avatar {
+    width: 35px;
+    height: 35px;
+    background-color: #f5eddf;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+    color: #c5a048;
+}
+
+.instructor-info span {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #4a3427;
+}
+
+.instructor-info small {
+    font-size: 10px;
+    color: #8c7361;
+}
+
+.course-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(197, 160, 72, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    border-radius: 20px;
+}
+
+.course-card:hover .course-hover {
+    opacity: 1;
+}
+
+.hover-content {
+    text-align: center;
+    color: #4a3427;
+    padding: 20px;
+}
+
+.hover-content h4 {
+    font-size: 18px;
+    margin-bottom: 12px;
+    color: white;
+}
+
+.hover-content p {
+    margin: 6px 0;
+    font-size: 13px;
+    color: white;
+}
+
+.hover-content strong {
+    color: #fdfaf5;
+}
+
+.more-courses-btn-container {
+    text-align: center;
+    margin-top: 5px;
+}
+
+.btn-more-courses {
+    display: inline-block;
+    background-color: transparent;
+    border: 2px solid #c5a048;
+    color: #c5a048;
+    padding: 8px 25px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 13px;
+    transition: all 0.3s;
+}
+
+.btn-more-courses:hover {
+    background-color: #c5a048;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* ============================================
+   REVIEWS SECTION
+   ============================================ */
+.reviews-section {
+    padding: 70px 0;
+    background-color: #ffffff;
+}
+
+.reviews-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.review-card {
+    background-color: #f5eddf;
+    padding: 28px;
+    border-radius: 20px;
+    width: 320px;
+    text-align: center;
+    transition: all 0.3s;
+    border: 1px solid #e0d5c1;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.review-text {
+    font-style: italic;
+    color: #6f5a4e;
+    line-height: 1.6;
+    margin-bottom: 18px;
+    font-size: 14px;
+}
+
+.reviewer-name {
+    font-size: 16px;
+    font-weight: 700;
+    color: #c5a048;
+    margin-bottom: 4px;
+}
+
+.reviewer-title {
+    font-size: 11px;
+    color: #8c7361;
+    margin-bottom: 10px;
+}
+
+.review-stars {
+    color: #c5a048;
+    font-size: 13px;
+}
+/* ============================================
+   COURSES PAGE STYLES
+   ============================================ */
+.page-header-courses {
+    background-color: #f5eddf;
+    padding: 50px 0 40px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.page-title {
+    font-size: 42px;
+    font-weight: 800;
+    color: #4a3427;
+    font-family: 'Amiri', serif;
+    margin-bottom: 10px;
+}
+
+.page-desc {
+    font-size: 18px;
+    color: #8c7361;
+}
+
+.courses-page {
+    padding: 0 0 60px;
+    background-color: #fdfaf5;
+}
+
+.courses-grid-page {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.course-card-page {
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 350px;
+    transition: all 0.3s;
+    border: 1px solid #e0d5c1;
+}
+
+.course-card-page:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.course-img-page {
+    height: 200px;
+    overflow: hidden;
+}
+
+.course-img-page img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.course-card-page:hover .course-img-page img {
+    transform: scale(1.03);
+}
+
+.course-info-page {
+    padding: 20px;
+}
+
+.course-info-page h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #c5a048;
+    margin-bottom: 10px;
+}
+
+.course-info-page p {
+    font-size: 14px;
+    color: #6f5a4e;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.course-meta-page {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.course-level-page {
+    background-color: #f5eddf;
+    color: #c5a048;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.course-level-page.advanced {
+    background-color: #e8d5b5;
+    color: #a38c71;
+}
+
+.course-teacher-page {
+    color: #8c7361;
+    font-size: 13px;
+}
+
+.course-link-page {
+    display: inline-block;
+    margin-top: 15px;
+    color: #c5a048;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.course-link-page:hover {
+    color: #a8893a;
+}
+
+/* ============================================
+   FILTER BUTTONS
+   ============================================ */
+.filter-section {
+    padding: 20px 0 30px;
+    background-color: #fdfaf5;
+    border-bottom: 1px solid #e0d5c1;
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background-color: transparent;
+    border: 2px solid #c5a048;
+    color: #c5a048;
+    padding: 8px 28px;
+    border-radius: 40px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: inherit;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background-color: #c5a048;
+    color: white;
+}
+/* ============================================
+   LESSON PAGE 1 STYLES
+   ============================================ */
+.lesson1-container {
+    padding: 50px 0;
+    background-color: #ffffff;
+    min-height: calc(100vh - 200px);
+}
+
+.lesson1-title {
+    font-size: 32px;
+    font-weight: 800;
+    color: #c5a048;
+    font-family: 'Amiri', serif;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.lesson1-image {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.lesson1-image img {
+    width: 100%;
+    max-width: 800px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.lesson1-text {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.lesson1-text p {
+    font-size: 16px;
+    color: #6f5a4e;
+    line-height: 1.8;
+}
+
+.lesson1-table-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.lesson1-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #f5eddf;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.lesson1-table th,
+.lesson1-table td {
+    padding: 14px 16px;
+    text-align: right;
+    border-bottom: 1px solid #e0d5c1;
+}
+
+.lesson1-table th {
+    background-color: #c5a048;
+    color: white;
+    font-weight: 600;
+}
+
+.lesson1-table td {
+    color: #6f5a4e;
+}
+
+.lesson1-table tr:last-child td {
+    border-bottom: none;
+}
+
+.lesson1-navigation {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 450px;
+    margin: 40px auto 0;
+}
+
+.lesson1-btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+    text-align: center;
+}
+
+.lesson1-btn-back {
+    background-color: transparent;
+    border: 2px solid #c5a048;
+    color: #c5a048;
+}
+
+.lesson1-btn-back:hover {
+    background-color: #c5a048;
+    color: white;
+}
+
+.lesson1-btn-next {
+    background-color: #c5a048;
+    color: white;
+}
+
+.lesson1-btn-next:hover {
+    background-color: #a8893a;
+}
+
+/* ============================================
+   LESSON PAGE 2 STYLES (ACCORDION)
+   ============================================ */
+.lesson2-container {
+    padding: 50px 0;
+    background-color: #ffffff;
+    min-height: calc(100vh - 200px);
+}
+
+.lesson2-title {
+    font-size: 32px;
+    font-weight: 800;
+    color: #c5a048;
+    font-family: 'Amiri', serif;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.lesson2-subtitle {
+    text-align: center;
+    color: #8c7361;
+    margin-bottom: 40px;
+}
+
+.accordion {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.accordion-item {
+    border: 1px solid #e0d5c1;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    background-color: white;
+}
+
+.accordion-header {
+    background-color: #f5eddf;
+    padding: 16px 20px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 18px;
+    color: #4a3427;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.3s;
+}
+
+.accordion-header:hover {
+    background-color: #efe2d0;
+}
+
+.accordion-icon {
+    color: #c5a048;
+    font-size: 14px;
+    transition: transform 0.3s;
+}
+
+.accordion-item.active .accordion-icon {
+    transform: rotate(180deg);
+}
+
+.accordion-content {
+    max-height: 0;
+    padding: 0 20px;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.3s;
+}
+
+.accordion-item.active .accordion-content {
+    max-height: 800px;
+    padding: 20px;
+}
+
+.accordion-list {
+    list-style: none;
+    margin: 0;
+}
+
+.accordion-list li {
+    padding: 8px 0;
+    color: #6f5a4e;
+    font-size: 15px;
+    line-height: 1.6;
+    border-bottom: 1px dashed #e0d5c1;
+}
+
+.accordion-list li:last-child {
+    border-bottom: none;
+}
+
+.accordion-list li strong {
+    color: #c5a048;
+}
+
+.accordion-list.nested {
+    margin-right: 20px;
+}
+
+.accordion-list.nested li ul {
+    list-style: none;
+    margin-top: 8px;
+    margin-right: 25px;
+}
+
+.accordion-list.nested li ul li {
+    border-bottom: none;
+    padding: 6px 0;
+    font-size: 14px;
+    color: #8c7361;
+}
+
+.lesson2-tip {
+    background-color: #fef5e8;
+    border-right: 4px solid #c5a048;
+    padding: 12px 16px;
+    margin-top: 15px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.lesson2-tip.warning {
+    background-color: #fff0e6;
+    border-right-color: #a38c71;
+}
+
+.lesson2-navigation {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 450px;
+    margin: 40px auto 0;
+}
+
+.lesson2-btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+    text-align: center;
+}
+
+.lesson2-btn-back {
+    background-color: transparent;
+    border: 2px solid #c5a048;
+    color: #c5a048;
+}
+
+.lesson2-btn-back:hover {
+    background-color: #c5a048;
+    color: white;
+}
+
+.lesson2-btn-next {
+    background-color: #c5a048;
+    color: white;
+}
+
+.lesson2-btn-next:hover {
+    background-color: #a8893a;
+}
+/* ============================================
+   REGISTER BUTTON
+   ============================================ */
+.btn-register {
+    background-color: #c5a048;
+    color: white;
+    padding: 8px 24px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.3s;
+    display: inline-block;
+}
+
+.btn-register:hover {
+    background-color: #a8893a;
+    transform: translateY(-2px);
+}
+
+/* تنسيق صفحة الدرس */
+.lesson-container {
+    padding: 40px 0;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.lesson-hero-image img {
+    width: 100%;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+.lesson-title {
+    color: #6f5a4e;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* تنسيق الجدول (على ستايل سارة) */
+.steps-table-wrapper {
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    margin: 40px 0;
+}
+
+.steps-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.steps-table th {
+    background-color: #f9f6f2;
+    color: #6f5a4e;
+    padding: 15px;
+    border-bottom: 2px solid #d4af37;
+    text-align: right;
+}
+
+.steps-table td {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+/* أزرار التنقل */
+.lesson-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.btn-next {
+    background-color: #d4af37;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-back {
+    color: #888;
+    text-decoration: none;
+    padding: 12px;
+}
+
+.btn-next:hover {
+    background-color: #6f5a4e;
+    transform: scale(1.05);
+}
+/* تنسيق صفحة الكويز المطور - نسخة ريما */
+
+.quiz-container {
+    padding: 50px 0;
+    direction: rtl; /* التأكد من أن الاتجاه من اليمين لليسار */
+}
+
+.question-block-gray {
+    background-color: #f4f4f4; /* رمادي فاتح مثل الواير فريم */
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    text-align: right; /* محاذاة النص لليمين */
+}
+
+.question-block-gray h3 {
+    color: #4a3427;
+    margin-bottom: 20px;
+    font-size: 19px;
+}
+
+/* هذا الجزء هو اللي بيصلح مشكلة الدوائر الطائرة */
+.option-row {
+    display: flex; /* يجعل الدائرة والكلام في سطر واحد */
+    align-items: center; /* يخلي الدائرة والكلام في نفس المستوى */
+    gap: 15px; /* مسافة ثابتة بين الدائرة والنص */
+    background: #ffffff;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.option-row:hover {
+    background-color: #fcf9f4;
+    border-color: #c5a048;
+}
+
+/* تصغير وتنسيق الدائرة نفسها */
+.option-row input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    margin: 0; /* إلغاء أي هوامش تلقائية تخليها في النص */
+    cursor: pointer;
+    flex-shrink: 0; /* منع الدائرة من التمدد أو التغير */
+}
+
+.submit-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.wireframe-submit-btn {
+    background-color: #fff;
+    border: 1px solid #333;
+    padding: 10px 60px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.wireframe-submit-btn:hover {
+    background-color: #333;
+    color: #fff;
+}
+.breadcrumbs {
+    background: #FEFAF5;
+    padding: 14px 0;
+    border-bottom: 1px solid #F0E6DC;
+    text-align: right;
+    font-size: 14px;
+    color: #8c7361;
+    margin-bottom: 20px;
+}
+.breadcrumbs .container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.breadcrumbs a {
+    color: #c5a048;
+    text-decoration: none;
+}
+
+.breadcrumbs .separator {
+    color: #d4c5b0;
+} 
+
+#backToTop {
+    display: none; 
+    position: fixed; 
+    bottom: 30px; 
+    left: 30px; 
+    z-index: 2000; 
+    background-color: #c5a048; 
+    color: white; 
+    border: none; 
+    padding: 15px; 
+    border-radius: 50%; 
+    cursor: pointer; 
+    font-size: 18px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+body.dark-theme {
+    background-color: #1a1a1a !important;
+    color: #fdfaf5 !important;
+}
+body.dark-theme header, 
+body.dark-theme .evaluation-box, 
+body.dark-theme .content-card,
+body.dark-theme .course-card,
+body.dark-theme table,
+body.dark-theme .note-item {
+    background-color: #2d2d2d !important;
+    color: #fdfaf5 !important;
+    border-color: #444 !important;
+}
+body.dark-theme a, body.dark-theme td, body.dark-theme p, body.dark-theme h1, body.dark-theme h2 {
+    color: #fdfaf5 !important;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 10px 20px !important;
+        height: auto !important;
+        flex-direction: column !important;
+        position: relative !important;
+    }
+    body { padding-top: 20px !important; }
+    .nav-links { gap: 10px !important; flex-wrap: wrap !important; justify-content: center !important; }
+    .hero-title { font-size: 32px !important; }
+    .features-grid, .courses-grid { flex-direction: column !important; align-items: center !important; }
+    .footer-bottom-columns { flex-direction: column !important; text-align: center !important; }
+    .sub-pill-container { width: 100% !important; }
+}
+/* Phase 3: إخفاء جدول النتائج في لوحة التحكم حتى يتم حل الاختبار */
+.section-title {
+    font-family: 'Cairo', sans-serif;
+    font-weight: 700;
+    color: #4a3427; /* اللون البني المعتمد في الهوية */
+    text-align: center;
+    margin-bottom: 5px;
+}
+#results-section {
+        display: none; /* مخفي افتراضياً ويظهر فقط إذا وجد JS نتيجة */
+        margin-top: 40px;

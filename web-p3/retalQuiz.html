@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حذوة | اختبار البطولات السعودية</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="images/logo.png" alt="Logo" width="45">
+            <span>حذوة</span>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">الرئيسية</a>
+            <a href="course-content.html" class="contact-gold active">الدورات</a>
+            <a href="dashboard.html">لوحة التحكم</a>
+            <a href="about.html">قصتنا</a>
+            <a href="contact.html">تواصل معنا</a>
+        </nav>
+        <div class="user-interface">
+            <button class="btn-lang">English</button>
+            <img src="images/user-icon.png" alt="User" width="35">
+        </div>
+    </header>
+
+    <div class="breadcrumbs">
+        <div class="container">
+            <a href="index.html">الرئيسية</a>
+            <span class="separator">/</span>
+            <a href="course-content.html">الدورات</a>
+            <span class="separator">/</span>
+            <a href="retalCourse.html">البطولات السعودية</a>
+            <span class="separator">/</span>
+            <span class="current">اختبر ثقافتك</span>
+        </div>
+    </div>
+
+    <main class="quiz-container">
+        <div class="quiz-box">
+            <h1 class="quiz-main-title">اختبار قصير: البطولات السعودية والمجد</h1>
+            
+            <form id="quiz-form">
+                <div class="question-block-gray">
+                    <h3>السؤال الأول: ما هو السباق الذي يُلقب بـ "تاج البطولات" في المملكة؟</h3>
+                    <label class="option-label"><input type="radio" name="q1" value="a" required> سباق ماراثون الصحراء</label>
+                    <label class="option-label"><input type="radio" name="q1" value="b"> سباق كأس المؤسس</label>
+                </div>
+
+                <div class="question-block-gray">
+                    <h3>السؤال الثاني: في سباقات القدرة، ما هو المعيار الأهم في الفحص البيطري؟</h3>
+                    <label class="option-label"><input type="radio" name="q2" value="a" required> سرعة نبضات القلب والتعافي</label>
+                    <label class="option-label"><input type="radio" name="q2" value="b"> لون الحصان وشكل السرج</label>
+                </div>
+
+                <div class="submit-container">
+                    <button type="button" id="submit-quiz" class="wireframe-submit-btn">ارسال النتيجة</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+   <footer>
+    <div class="footer-top-subscription">
+        <div class="sub-pill-container">
+            <button>اشتراك</button>
+            <input type="email" placeholder="ادخل بريدك الإلكتروني">
+        </div>
+    </div>
+
+    <div class="footer-bottom-columns">
+        <div class="footer-col" style="flex: 1.5;">
+            <div class="footer-title-yellow"><br><b>حذوة</b></div>
+            <p>نحيي تراث الفروسية العربية من خلال تعليم عالمي المستوى يربط<br> الماضي بالمستقبل.</p>
+        </div>
+
+        <div class="footer-col" style="text-align: right;">
+            <h4>روابط سريعة</h4>
+            <a href="index.html">الرئيسية</a>
+            <a href="course-content.html">الدورات</a>
+            <a href="dashboard.html">لوحة التحكم</a>
+            <a href="about.html">قصتنا</a>
+            <a href="contact.html">تواصل معنا</a>
+        </div>
+
+        <div class="footer-col footer-contact-box">
+            <h4>تواصل اجتماعي</h4>
+            
+                <div class="footer-social-group">
+                    <a href="https://whatsapp.com/channel/0029VbCj9niCXC3H0x5eJj0y" target="_blank"><img src="images/whatsapp.svg" class="footer-social-icon" alt="WA"></a>
+                    <a href="https://www.youtube.com/@%D8%AD%D8%B0%D9%88%D8%A9" target="_blank"><img src="images/youtube.svg" class="footer-social-icon" alt="YT"></a>
+					<a href="https://x.com/hathwaweb" target="_blank"><img src="images/X.svg" class="footer-social-icon" alt="X"></a>
+                    <a href="https://www.instagram.com/hadwa.web?igsh=MW1tMGdzNGtrbWV0ZQ%3D%3D&utm_source=qr" target="_blank"><img src="images/instagram.svg" class="footer-social-icon" alt="IG"></a>
+                </div>
+        </div>
+    </div>
+
+    <div style="text-align: center; font-size: 11px; margin-top: 40px; opacity: 0.6; border-top: 1px solid #6f5a4e; padding-top: 20px;">
+        ©️ 2026 حذوة (جميع الحقوق محفوظة)
+        <div id="clock" style="margin-top: 10px; font-weight: bold; color: #d4af37; font-size: 13px;"></div>
+    </div>
+</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

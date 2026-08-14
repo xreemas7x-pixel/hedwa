@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حذوة | ملاحظاتي</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="images/logo.png" alt="Logo" width="45">
+            <span>حذوة</span>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">الرئيسية</a>
+            <a href="course-content.html">الدورات</a>
+            <a href="dashboard.html" class="contact-gold active">لوحة التحكم</a>
+            <a href="about.html">قصتنا</a>
+            <a href="contact.html">تواصل معنا</a>
+        </nav>
+        <div class="user-interface">
+            <button class="btn-lang">English</button>
+            <img src="images/user-icon.png" alt="User" width="35">
+        </div>
+    </header>
+
+    <div class="breadcrumbs">
+        <div class="container">
+            <a href="index.html">الرئيسية</a>
+            <span class="separator">/</span>
+            <a href="dashboard.html">لوحة التحكم</a>
+            <span class="separator">/</span>
+            <span class="current">ملاحظاتي</span>
+        </div>
+    </div>
+
+    <main class="main-wrapper">
+        <div class="page-title-section" style="text-align: center; margin-top: 30px;">
+            <h1>🗒️ ملاحظاتي</h1>
+        </div>
+        <hr style="width: 20%; border: 0.5px solid #e0d5c1; margin: 20px auto 40px auto;">
+
+        <div class="evaluation-box">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                <button type="button" class="btn-delete" onclick="deleteSelectedNotes()">حذف المحددة</button>
+            </div>
+
+            <div id="notesContainer">
+                </div>
+
+            <hr style="border: 0.5px solid #e0d5c1; margin: 30px 0;">
+
+            <div style="margin-top: 30px; text-align: right;">
+                <label style="font-weight: bold; display: block; margin-bottom: 10px;">إضافة ملاحظة جديدة</label>
+                
+                <select id="notePriority" style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 5px; border: 1px solid #c9b9a5; font-family: 'Cairo';">
+                    <option value="">-- اختر مستوى الأولوية --</option>
+                    <option value="1">أولوية قصوى (أحمر)</option>
+                    <option value="2">أولوية متوسطة (أصفر)</option>
+                    <option value="3">أولوية منخفضة (أخضر)</option>
+                </select>
+
+                <textarea id="noteText" rows="4" placeholder="اكتب ملاحظاتك هنا (30 حرفاً على الأقل)..." style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #c9b9a5; font-family: 'Cairo'; box-sizing: border-box;"></textarea>
+                
+                <button type="button" class="btn-send" onclick="saveNote()" style="margin-top: 15px;">حفظ الملاحظة</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+    <div class="footer-top-subscription">
+        <div class="sub-pill-container">
+            <button>اشتراك</button>
+            <input type="email" placeholder="ادخل بريدك الإلكتروني">
+        </div>
+    </div>
+
+    <div class="footer-bottom-columns">
+        <div class="footer-col" style="flex: 1.5;">
+            <div class="footer-title-yellow"><br><b>حذوة</b></div>
+            <p>نحيي تراث الفروسية العربية من خلال تعليم عالمي المستوى يربط<br> الماضي بالمستقبل.</p>
+        </div>
+
+        <div class="footer-col" style="text-align: right;">
+            <h4>روابط سريعة</h4>
+            <a href="index.html">الرئيسية</a>
+            <a href="course-content.html">الدورات</a>
+            <a href="dashboard.html">لوحة التحكم</a>
+            <a href="about.html">قصتنا</a>
+            <a href="contact.html">تواصل معنا</a>
+        </div>
+
+        <div class="footer-col footer-contact-box">
+            <h4>تواصل اجتماعي</h4>
+            
+                <div class="footer-social-group">
+                    <a href="https://whatsapp.com/channel/0029VbCj9niCXC3H0x5eJj0y" target="_blank"><img src="images/whatsapp.svg" class="footer-social-icon" alt="WA"></a>
+                    <a href="https://www.youtube.com/@%D8%AD%D8%B0%D9%88%D8%A9" target="_blank"><img src="images/youtube.svg" class="footer-social-icon" alt="YT"></a>
+					<a href="https://x.com/hathwaweb" target="_blank"><img src="images/X.svg" class="footer-social-icon" alt="X"></a>
+                    <a href="https://www.instagram.com/hadwa.web?igsh=MW1tMGdzNGtrbWV0ZQ%3D%3D&utm_source=qr" target="_blank"><img src="images/instagram.svg" class="footer-social-icon" alt="IG"></a>
+                </div>
+        </div>
+    </div>
+
+    <div style="text-align: center; font-size: 11px; margin-top: 40px; opacity: 0.6; border-top: 1px solid #6f5a4e; padding-top: 20px;">
+        ©️ 2026 حذوة (جميع الحقوق محفوظة)
+        <div id="clock" style="margin-top: 10px; font-weight: bold; color: #d4af37; font-size: 13px;"></div>
+    </div>
+</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

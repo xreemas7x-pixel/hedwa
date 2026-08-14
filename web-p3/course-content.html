@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حذوة | الدورات</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style1.css">
+    <style>
+        /* ستايل إضافي بسيط لمطلب Phase 3 */
+        .extra-courses { display: none; } /* نخفي الكورسات الإضافية في البداية */
+        .show-more-container { text-align: center; margin: 40px 0; }
+        .btn-show-more {
+            background-color: transparent;
+            border: 2px solid #c5a048;
+            color: #c5a048;
+            padding: 10px 30px;
+            border-radius: 40px;
+            cursor: pointer;
+            font-weight: bold;
+            font-family: inherit;
+        }
+        .btn-show-more:hover { background-color: #c5a048; color: white; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="images/logo.png" alt="Logo" width="45">
+            <span>حذوة</span>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">الرئيسية</a>
+            <a href="course-content.html" class="contact-gold active">الدورات</a>
+            <a href="dashboard.html">لوحة التحكم</a>
+            <a href="about.html">قصتنا</a>
+            <a href="contact.html">تواصل معنا</a>
+        </nav>
+        <div class="user-interface">
+            <button id="theme-toggle" class="btn-lang" style="background:none; border:1px solid #e0d5c1; cursor:pointer;">🌓</button>
+            <button class="btn-lang">English</button>
+            <img src="images/user-icon.png" alt="User" width="35">
+        </div>
+    </header>
+
+    <div class="breadcrumbs">
+        <div class="container">
+            <a href="index.html">الرئيسية</a>
+            <span class="separator">/</span>
+            <span class="current">الدورات</span>
+        </div>
+    </div>
+
+    <div class="page-header-courses">
+        <div class="container">
+            <h1 class="page-title">الدورات</h1>
+            <p class="page-desc">اكتشف مجموعتنا المنتقاة من دورات الفروسية</p>
+        </div>
+    </div>
+
+    <div class="filter-section">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" onclick="filterSelection('all')">الكل</button>
+                <button class="filter-btn" onclick="filterSelection('care')">العناية والتهيئة</button>
+                <button class="filter-btn" onclick="filterSelection('history')">التاريخ والثقافة</button>
+                <button class="filter-btn" onclick="filterSelection('competition')">المنافسة</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="courses-page">
+        <div class="container">
+            <div class="courses-grid-page" id="coursesContainer">
+                
+                <div class="course-card-page care">
+                    <div class="course-img-page">
+                        <img src="images/sara1.png" alt="العناية بالخيل">
+                    </div>
+                    <div class="course-info-page">
+                        <h3>العناية الأساسية بالخيل والتهيئة</h3>
+                        <p>تعلّم فن العناية بالخيل العربية — من روتين التهيئة اليومي إلى التغذية ومراقبة الصحة.</p>
+                        <div class="course-meta-page">
+                            <span class="course-level-page">مبتدئ</span>
+                            <span class="course-teacher-page">ساره موكلي</span>
+                        </div>
+                        <a href="lw.html" class="course-link-page">عرض الدورة ←</a>
+                    </div>
+                </div>
+
+                <div class="course-card-page history">
+                    <div class="course-img-page">
+                        <img src="images/layancourse.png" alt="الركوب المتقدم">
+                    </div>
+                    <div class="course-info-page">
+                        <h3>خيل الموحد والفروسية السعودية</h3>
+                        <p>الفروسية جوهر الهوية السعودية، ارتبطت بصهيل الخيل وبسالة الملك عبدالعزيز.</p>
+                        <div class="course-meta-page">
+                            <span class="course-level-page">مبتدئ</span>
+                            <span class="course-teacher-page">ليان الطويل</span>
+                        </div>
+                        <a href="layanCourse.html" class="course-link-page">عرض الدورة ←</a>
+                    </div>
+                </div>
+
+                <div class="course-card-page competition">
+                    <div class="course-img-page">
+                        <img src="images/retal12.jpeg" alt="أسس الركوب">
+                    </div>
+                    <div class="course-info-page">
+                        <h3>الأبطال والجوائز</h3>
+                        <p>استكشف مسيرة الذهب في الميادين السعودية، وتعرف على سيرة الأبطال.</p>
+                        <div class="course-meta-page">
+                            <span class="course-level-page">مبتدئ</span>
+                            <span class="course-teacher-page">ريتال كمال</span>
+                        </div>
+                        <a href="retalCourse.html" class="course-link-page">عرض الدورة ←</a>
+                    </div>
+                </div>
+
+                <div class="course-card-page care extra-courses">
+                    <div class="course-img-page">
+                        <img src="images/ريماس-الدرس.jpeg" alt="أساسيات الجواد المتقدمة">
+                    </div>
+                    <div class="course-info-page">
+                        <h3>أساسيات الجواد المتقدمة</h3>
+                        <p>ننتقل بك إلى مستوى الاحترافية، نركز على فهم سلوك الجواد والتعامل مع العناد بذكاء.</p>
+                        <div class="course-meta-page">
+                            <span class="course-level-page advanced">متقدم</span>
+                            <span class="course-teacher-page">ريماس ناصر</span>
+                        </div>
+                        <a href="reemasCourse.html" class="course-link-page">عرض الدورة ←</a>
+                    </div>
+                </div>
+
+                <div class="course-card-page care extra-courses">
+                    <div class="course-img-page">
+                        <img src="images/rema.jpeg" alt="الصحة والتغذية">
+                    </div>
+                    <div class="course-info-page">
+                        <h3>الصحة والتغذية</h3>
+                        <p>دروس احترافية في إعداد خيول السباق وتغذيتها من الخبيرة ريما الدوسري.</p>
+                        <div class="course-meta-page">
+                            <span class="course-level-page advanced">خبير</span>
+                            <span class="course-teacher-page">ريما الدوسري</span>
+                        </div>
+                        <a href="remaCourse.html" class="course-link-page">عرض الدوره ←</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="show-more-container">
+                <button id="showMoreBtn" class="btn-show-more" onclick="showMoreCourses()">عرض المزيد من الدورات</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+    <div class="footer-top-subscription">
+        <div class="sub-pill-container">
+            <button>اشتراك</button>
+            <input type="email" placeholder="ادخل بريدك الإلكتروني">
+        </div>
+    </div>
+
+    <div class="footer-bottom-columns">
+        <div class="footer-col" style="flex: 1.5;">
+            <div class="footer-title-yellow"><br><b>حذوة</b></div>
+            <p>نحيي تراث الفروسية العربية من خلال تعليم عالمي المستوى يربط<br> الماضي بالمستقبل.</p>
+        </div>
+
+        <div class="footer-col" style="text-align: right;">
+            <h4>روابط سريعة</h4>
+            <a href="index.html">الرئيسية</a>
+            <a href="course-content.html">الدورات</a>
+            <a href="dashboard.html">لوحة التحكم</a>
+            <a href="about.html">قصتنا</a>
+            <a href="contact.html">تواصل معنا</a>
+        </div>
+
+        <div class="footer-col footer-contact-box">
+            <h4>تواصل اجتماعي</h4>
+            
+                <div class="footer-social-group">
+                    <a href="https://whatsapp.com/channel/0029VbCj9niCXC3H0x5eJj0y" target="_blank"><img src="images/whatsapp.svg" class="footer-social-icon" alt="WA"></a>
+                    <a href="https://www.youtube.com/@%D8%AD%D8%B0%D9%88%D8%A9" target="_blank"><img src="images/youtube.svg" class="footer-social-icon" alt="YT"></a>
+					<a href="https://x.com/hathwaweb" target="_blank"><img src="images/X.svg" class="footer-social-icon" alt="X"></a>
+                    <a href="https://www.instagram.com/hadwa.web?igsh=MW1tMGdzNGtrbWV0ZQ%3D%3D&utm_source=qr" target="_blank"><img src="images/instagram.svg" class="footer-social-icon" alt="IG"></a>
+                </div>
+        </div>
+    </div>
+
+    <div style="text-align: center; font-size: 11px; margin-top: 40px; opacity: 0.6; border-top: 1px solid #6f5a4e; padding-top: 20px;">
+        ©️ 2026 حذوة (جميع الحقوق محفوظة)
+        <div id="clock" style="margin-top: 10px; font-weight: bold; color: #d4af37; font-size: 13px;"></div>
+    </div>
+</footer>
+
+    <button id="backToTop" style="display:none; position:fixed; bottom:30px; left:30px; background:#c5a048; color:white; border:none; padding:15px; border-radius:50%; cursor:pointer;">↑</button>
+
+    <script>
+        // دالة عرض المزيد من الكورسات لمطلب Phase 3
+        function showMoreCourses() {
+            const extraCourses = document.querySelectorAll('.extra-courses');
+            const btn = document.getElementById('showMoreBtn');
+            
+            extraCourses.forEach(course => {
+                course.style.display = 'block'; // إظهار الكورسات المخفية
+            });
+            
+            btn.style.display = 'none'; // إخفاء الزر بعد الضغط عليه
+        }
+
+        // دالة الفلترة (موجودة سابقاً)
+        function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("course-card-page");
+            if (c == "all") c = "";
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+                if (x[i].className.indexOf(c) > -1) {
+                    x[i].style.display = "block";
+                }
+            }
+            // إعادة ضبط زر "عرض المزيد" إذا تم الفلترة
+            document.getElementById('showMoreBtn').style.display = 'none';
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
